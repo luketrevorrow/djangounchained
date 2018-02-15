@@ -1,0 +1,6 @@
+applications:
+ - name: djangounchained
+   random-route: false
+   memory: 128M
+   command: sh run.sh
+   buildpack: https://github.com/cloudfoundry/buildpack-python.git
