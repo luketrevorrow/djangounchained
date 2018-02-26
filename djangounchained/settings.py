@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
+from cfenv import AppEnv
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,11 +26,15 @@ SECRET_KEY = '#*ur)91sf@1=9wnrsj22860qhm0sl6_#2(!+bi9k&gzm38vodw'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    'djangounchained.eu-gb.mybluemix.net',
-    'localhost'
-]
-
+# use the pycfenv library to get the applications URI from Cloud Foundry
+# and set as the ALLOWED_HOST. Useful for autodeployment
+env = AppEnv()
+if not env.uris:
+    ALLOWED_HOSTS = [
+        'localhost'
+    ]
+else:
+    ALLOWED_HOSTS = env.uris
 
 # Application definition
 

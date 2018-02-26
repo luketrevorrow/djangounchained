@@ -1,5 +1,6 @@
 #!/bin/bash
 echo "Running migrations"
+./manage.py makemigrations
 ./manage.py migrate
 
 echo "Creating admin user"
