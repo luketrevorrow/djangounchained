@@ -13,7 +13,7 @@ To make things really simple I have included the Deploy to IBM Cloud button, so 
 
 - IBM Cloud as my PaaS
 - Python 3.6.4
-- Django 2.2.10
+- Django 2.2.27
 - SQLite Database
 
 All the details of how I got this up and running are documented in my blog entry [https://codemii.blogspot.co.uk/2018/02/django-unchained.html](https://codemii.blogspot.co.uk/2018/02/django-unchained.html)
