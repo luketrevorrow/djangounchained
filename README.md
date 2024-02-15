@@ -1,3 +1,5 @@
+## *** This project is no longer maintained ***
+
 # Django Unchained
 This repository contains everything needed to get Django 2 up and running on a Cloud Foundry cloud provider, such as IBMs Cloud (formally known as Bluemix). I have assumed all the following prerequisites:
 - An IBM Cloud account
